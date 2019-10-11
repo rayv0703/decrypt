@@ -1,2 +1,21 @@
 server:
   port: 8711
+
+#添加本地页面
+spring:
+  resources:
+    static-locations: classpath:/templates
+  thymeleaf:
+    cache: true
+    check-template: true
+    check-template-location: true
+    enabled: true
+    enable-spring-el-compiler: false
+    encoding: UTF-8
+    suffix: .html
+    mode: HTML
+    prefix: classpath:/templates/
+    reactive:
+      max-chunk-size: 0
+    servlet:
+      content-type: text/html
